@@ -8,16 +8,9 @@
 <body>
     <script>
         const params = new URLSearchParams(window.location.search);
-        const code = params.code;
-        const state = params.state;
-        console.log('code',code);
-        console.log('state',state);
-        const code2 = params.get('code');
-        const state2 = params.get('state');
-        console.log('getCode',code2);
-        console.log('getState',state2);
-
-        //window.location.href = 'https://2ecde25e.r18.cpolar.top/pss/aTopLogin?code='+code+'&state='+state;
+        const code = params.get('code');
+        const state = params.get('state');
+        window.location.href = 'https://2ecde25e.r18.cpolar.top/pss/aTopLogin?code='+code+'&state='+state;
     </script>
 </body>
 </html>
