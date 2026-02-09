@@ -21,7 +21,7 @@
             const nonce = decodeURIComponent(params.get('nonce'));
             const echostr = decodeURIComponent(params.get('echostr'));
 
-            window.location.href = baseUrl+'app-api/pss/aTopMsgCallback?msg_signature='+msg_signature
+            window.location.href = baseUrl+'app-api/system/auth/aTopMsgCallback?msg_signature='+msg_signature
                                 +'&timestamp'+timestamp
                                 +'&nonce='+nonce
                                 +'&echostr='+echostr;
