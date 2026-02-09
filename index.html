@@ -10,7 +10,23 @@
         const params = new URLSearchParams(window.location.search);
         const code = params.get('code');
         const state = params.get('state');
-        window.location.href = 'http://293311da.vip.cpolar.top/pss/aTopCallback?code='+code+'&state='+state;
+        const flag = params.get('flag');
+
+        const baseUrl = 'http://293311da.vip.cpolar.top';
+        if(!flag){
+            window.location.href = baseUrl+'/pss/aTopCallback?code='+code+'&state='+state;
+        }else{
+            const msg_signature = params.get('msg_signature');
+            const timestamp = params.get('timestamp');
+            const nonce = params.get('nonce');
+            const echostr = params.get('echostr');
+
+            window.location.href = baseUrl+'/pss/aTopMsgCallback?msg_signature='+msg_signature
+                                +'&timestamp'+timestamp
+                                +'&nonce='+nonce
+                                +'&echostr='+echostr;
+        }
+
     </script>
 </body>
 </html>
