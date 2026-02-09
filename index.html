@@ -16,10 +16,10 @@
         if(!flag){
             window.location.href = baseUrl+'/pss/aTopCallback?code='+code+'&state='+state;
         }else{
-            const msg_signature = params.get('msg_signature');
-            const timestamp = params.get('timestamp');
-            const nonce = params.get('nonce');
-            const echostr = params.get('echostr');
+            const msg_signature = decodeURIComponent(params.get('msg_signature'));
+            const timestamp = decodeURIComponent(params.get('timestamp'));
+            const nonce = decodeURIComponent(params.get('nonce'));
+            const echostr = decodeURIComponent(params.get('echostr'));
 
             window.location.href = baseUrl+'/pss/aTopMsgCallback?msg_signature='+msg_signature
                                 +'&timestamp'+timestamp
